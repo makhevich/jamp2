@@ -3,7 +3,7 @@ import java.util.Scanner; // Подгружаем библиотеку, где �
 
 public class Program {
 
-    public static int rnd()              
+    public static int rnd()
     {
         Random rnd = new Random();
         return (rnd.nextInt(100) + 1);
@@ -11,6 +11,7 @@ public class Program {
 
     public static int UserChoice()
     {
+
         System.out.println("Отгадай загаданное число ");
         Scanner in = new Scanner(System.in);
         return (in.nextInt());
@@ -20,20 +21,25 @@ public class Program {
 
 
         int madeANumber = rnd();
+        System.out.println("Число, которое загодал комп.: " + madeANumber);
         int answerOption = UserChoice();
 
-        System.out.println("Число, которое загодал комп.: " + madeANumber);
 
-        if (answerOption < madeANumber)
+
+        if (answerOption < madeANumber){
+            System.out.println("Число, которое загодал комп.: " + madeANumber);
             System.out.println("Я сам в шоке, но, загаданное число больше, брат  ");
-        if (answerOption > madeANumber)
+        }
+
+        if (answerOption > madeANumber){
+            System.out.println("Число, которое загодал комп.: " + madeANumber);
             System.out.println("Не ожидал от тебя такого. Загаданное число меньше, брат  ");
-        else
+        }
+
+        if (answerOption == madeANumber){
+            System.out.println("Число, которое загодал комп.: " + madeANumber);
             System.out.println("Молодец!");
-
-
-
-        System.out.printf("Bone %d \n", UserChoice());
-        //56in.close();                                  // Прекращаем программу.
+            //in.close();
+        }
     }
 }
