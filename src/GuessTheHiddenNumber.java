@@ -8,7 +8,7 @@ public class GuessTheHiddenNumber {
 
         var number = ThreadLocalRandom.current().nextInt(1, 101);
         var currentAttempts = attempts;
-        System.out.println("Угодай число от 0 до 100 ");
+        System.out.println("Угодай число от 1 до 100 ");
         while (currentAttempts > 0) {
             currentAttempts--;
             var input = Integer.parseInt(scanner.nextLine());
